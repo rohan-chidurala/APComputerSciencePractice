@@ -3,8 +3,8 @@ What is the output produced from the following program? You may wish to draw a s
 
 public class Strange {
     public static void main(String[] args) {
+        second();
         first();
-        third();
         second();
         third();
     }
@@ -19,23 +19,22 @@ public class Strange {
     }
 
     public static void third() {
+        System.out.println("Inside third method.");
         first();
         second();
-        System.out.println("Inside third method.");
     }
 }
 */
 
 /*ANSWER:
-Inside first method.
-Inside first method.
-Inside second method.
-Inside first method.
-Inside third method.
 Inside second method.
 Inside first method.
 Inside first method.
 Inside second method.
 Inside first method.
 Inside third method.
+Inside first method.
+Inside second method.
+Inside first method.
+
 */
